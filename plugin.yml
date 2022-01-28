@@ -1,0 +1,19 @@
+---
+
+name: SayWelcome
+version: 1.0.0
+main: SayWelcome\Main
+api: 4.0.0
+
+author: Verre2OuiSki
+description: Say welcome to new players !
+website: https://github.com/Verre2OuiSki
+
+# - - - - - - - - - - - - - - - -
+
+permissions:
+  saywelcome.welcome:
+    description: "Allow the player to welcome new players"
+    default: true
+
+...
