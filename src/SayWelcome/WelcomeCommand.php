@@ -27,12 +27,14 @@ class WelcomeCommand extends Command{
         
         // If player doesn't have permission
         if(!$sender->hasPermission($this->getPermission())){
-            return $sender->sendMessage($this->getPermissionMessage());
+            $sender->sendMessage($this->getPermissionMessage());
+            return;
         }
 
         // If player isn't a player
         if(!($sender instanceof Player)){
-            return $sender->sendMessage("You must be a player to do that");
+            $sender->sendMessage("You must be a player to do that");
+            return;
         }
         
 
