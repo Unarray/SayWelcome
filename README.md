@@ -4,9 +4,10 @@
     <img src="https://raw.githubusercontent.com/Verre2OuiSki/SayWelcome/main/icon.png" style="height: 8em;"></img>
     <br>
     <b>
-      A configurable PocketMine-MP plugin allows you to say welcome to a new player joining the server, and earn a reward for your kindness!
+      A configurable <i>PocketMine-MP</i> plugin allows you to say welcome to a new player joining the server, and earn a reward for your kindness!
     </b>
 </p>
+
 
 
 # 💻 Commands
@@ -14,6 +15,7 @@
 Command | Permission | Default | Description
 --- | --- | --- | ---
 `/welcome` | saywelcome.welcom | `true` | Allow the player to welcome new players
+
 
 
 # 💾 Config
@@ -71,6 +73,7 @@ rewards:
 
 ...
 ```
+
 
 
 # 📫 Reach me
