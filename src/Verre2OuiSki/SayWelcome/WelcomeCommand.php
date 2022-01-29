@@ -1,6 +1,6 @@
 <?php
 
-namespace SayWelcome;
+namespace Verre2OuiSki\SayWelcome;
 
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
@@ -20,7 +20,7 @@ class WelcomeCommand extends Command{
             "/welcome"
         );
 
-        $this->setPermission("saywelcome.welcome");
+        $this->setPermission("saywelcome.command.welcome");
     }
 
     public function execute(CommandSender $sender, string $commandLabel, array $args){

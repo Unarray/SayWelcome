@@ -2,7 +2,7 @@
 
 name: SayWelcome
 version: 1.0.0
-main: SayWelcome\Main
+main: Verre2OuiSki\SayWelcome\Main
 api: 4.0.0
 
 author: Verre2OuiSki
@@ -12,7 +12,7 @@ website: https://github.com/Verre2OuiSki
 # - - - - - - - - - - - - - - - -
 
 permissions:
-  saywelcome.welcome:
+  saywelcome.command.welcome:
     description: "Allow the player to welcome new players"
     default: true
 

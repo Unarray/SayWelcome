@@ -1,7 +1,7 @@
 # 💬 SayWelcome
  
 <p align="center">
-    <img src="./icon.png" style="height: 8em;"></img>
+    <img src="https://raw.githubusercontent.com/Verre2OuiSki/SayWelcome/main/icon.png" style="height: 8em;"></img>
     <br>
     <b>
       A configurable PocketMine-MP plugin allows you to say welcome to a new player joining the server, and earn a reward for your kindness!
@@ -76,7 +76,6 @@ rewards:
 # 📫 Reach me
 
 <div align="center">
-    <img src="./verre2ouiski.png" style="height: 8em;"></img><br>
     <a href="https://discord.gg/P8R4WhARrY">
         <img src="https://img.shields.io/badge/Discord%20%28EN%29-%237289DA.svg?style=for-the-badge&logo=discord&logoColor=white"></img>
     </a>

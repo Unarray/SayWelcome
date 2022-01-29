@@ -1,6 +1,6 @@
 <?php
 
-namespace SayWelcome;
+namespace Verre2OuiSki\SayWelcome;
 
 use pocketmine\scheduler\Task;
 
@@ -16,6 +16,10 @@ class WelcomeTime extends Task{
         $this->plugin->new_player = null;
         $this->plugin->players_say_welcome = [];
         $this->plugin->task = null;
+    }
+
+    public function onCancel(): void {
+        $this->plugin->players_say_welcome = [];
     }
 
 }

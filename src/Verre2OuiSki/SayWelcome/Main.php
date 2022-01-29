@@ -1,6 +1,6 @@
 <?php
 
-namespace SayWelcome;
+namespace Verre2OuiSki\SayWelcome;
 
 use pocketmine\event\Listener;
 use pocketmine\event\player\PlayerJoinEvent;
@@ -11,17 +11,15 @@ class Main extends PluginBase implements Listener{
 
     private static $_instance;
     
-    public $messages;
     private $welcome_time;
+    public $messages;
     public $new_player;
     public $rewards;
     public $task;
     public $players_say_welcome = [];
 
-    public function onLoad() : void {
-        $this->getLogger()->info(
-            TextFormat::GOLD . $this->getName() . " loading..."
-        );
+    public static function getInstance(): self{
+        return self::$_instance;
     }
 
     public function onEnable() : void {
@@ -30,18 +28,12 @@ class Main extends PluginBase implements Listener{
         $config = $this->getConfig();
 
         $this->messages = $config->get("messages");
-
         $this->rewards = $config->get("rewards");
-
         $time = explode(":", $config->get("welcome_time"));
         $this->welcome_time = intval($time[0]) * 60 * 20 + intval($time[1]) * 20;
 
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
         $this->getServer()->getCommandMap()->register( $this->getName(), new WelcomeCommand( $this ) );
-
-        $this->getLogger()->info(
-            TextFormat::GREEN . $this->getName() . " enabled !"
-        );
     }
 
 
@@ -49,8 +41,10 @@ class Main extends PluginBase implements Listener{
     public function onJoin( PlayerJoinEvent $event ){
         $player = $event->getPlayer();
         if(!$player->hasPlayedBefore()){
+
             $this->new_player = $player->getName();
 
+            // test if a delayed task is planned
             if($this->task){
                 $this->task->getHandler()->cancel();
             }
@@ -64,9 +58,4 @@ class Main extends PluginBase implements Listener{
             );
         }
     }
-
-    public static function getInstance(): self{
-        return self::$_instance;
-    }
-
 }
