@@ -26,10 +26,8 @@ class WelcomeCommand extends Command{
     public function execute(CommandSender $sender, string $commandLabel, array $args){
         
         // If player doesn't have permission
-        if(!$sender->hasPermission($this->getPermission())){
-            $sender->sendMessage($this->getPermissionMessage());
-            return;
-        }
+        if(!$this->testPermission($sender, $this->getPermission())) return;
+
 
         // If player isn't a player
         if(!($sender instanceof Player)){
